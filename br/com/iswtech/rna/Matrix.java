@@ -11,21 +11,34 @@ public class Matrix {
 	private double MinValue, MaxValue;
 	private double[] Data;
 
+	// MAIN
 	public static void main(String[] args) {
 		Matrix m = new Matrix(5,5);
 		m.setValue(0, 0, 1000.5);
 		m.setValue(4, 4, 1000.5);
 		m.print();
-
-	}
-
-	public Matrix() {
-		this.Lines = 0;
-		this.Columns = 0;
-		this.MinValue = Double.MIN_VALUE;
-		this.MaxValue = Double.MAX_VALUE;
 	}
 	
+	/**
+	* Construtor
+	* @author	Clayton de Medeiros Vasconcelos
+	* @since	30/08/2017
+	*/
+	public Matrix() {
+		this.Lines = 10;
+		this.Columns = 10;
+		this.MinValue = Double.MIN_VALUE;
+		this.MaxValue = Double.MAX_VALUE;
+		Data = new double[100];
+	}
+	
+	/**
+	* Construtor
+	* @author	Clayton de Medeiros Vasconcelos
+	* @since	30/08/2017
+	* @param	valLines	Número de linhas
+	* @param	valColumns	Número de colunas
+	*/
 	public Matrix(int valLines, int valColumns) {
 		this.Lines = valLines;
 		this.Columns = valColumns;
